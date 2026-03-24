@@ -1,6 +1,6 @@
 import { jsxToString } from "jsx-async-runtime";
 
-export default function HelloWorld({ greeting }) {
+export default function HelloWorld({ greeting }: { greeting: string }) {
   return (
     <>
       {{ html: `<!DOCTYPE html>` }}

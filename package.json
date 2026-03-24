@@ -2,12 +2,11 @@
   "name": "jsx-async-runtime-quickstart",
   "type": "module",
   "scripts": {
-    "start": "tsx src/App.jsx"
+    "build": "tsc",
+    "start": "node dist/App.js"
   },
   "dependencies": {
-    "jsx-async-runtime": "2.0.3"
-  },
-  "devDependencies": {
-    "tsx": "4.21.0"
+    "jsx-async-runtime": "2.1.0",
+    "typescript": "6.0.2"
   }
 }

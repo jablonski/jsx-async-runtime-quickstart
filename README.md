@@ -4,5 +4,6 @@ A minimum example how to get started with <https://github.com/jeasx/jsx-async-ru
 
 ```sh
 npm install
+npm run build
 npm start
 ```
