@@ -2,13 +2,9 @@
   "compilerOptions": {
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "target": "esnext",
     "rootDir": "src",
     "outDir": "dist",
     "jsx": "react-jsx",
     "jsxImportSource": "jsx-async-runtime",
-    "allowJs": true,
-    "checkJs": true,
   },
-  "include": ["src"],
 }
