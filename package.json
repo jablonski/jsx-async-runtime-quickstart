@@ -6,7 +6,7 @@
     "start": "node dist/App.js"
   },
   "dependencies": {
-    "jsx-async-runtime": "2.1.0",
+    "jsx-async-runtime": "2.1.1",
     "typescript": "6.0.2"
   }
 }
