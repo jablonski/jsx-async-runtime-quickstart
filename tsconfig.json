@@ -5,6 +5,6 @@
     "rootDir": "src",
     "outDir": "dist",
     "jsx": "react-jsx",
-    "jsxImportSource": "jsx-async-runtime",
-  },
+    "jsxImportSource": "jsx-async-runtime"
+  }
 }
