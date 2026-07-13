@@ -3,10 +3,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/App.js"
+    "start": "node dist/App.js",
+    "clean": "tsc --build --clean"
   },
   "dependencies": {
-    "jsx-async-runtime": "2.1.3",
+    "jsx-async-runtime": "2.2.0",
     "typescript": "7.0.2"
   }
 }
