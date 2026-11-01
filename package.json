@@ -7,7 +7,7 @@
     "clean": "tsc --build --clean"
   },
   "dependencies": {
-    "jsx-async-runtime": "2.2.1",
+    "jsx-async-runtime": "3.0.0",
     "typescript": "7.0.2"
   }
 }

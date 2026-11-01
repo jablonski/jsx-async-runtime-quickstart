@@ -1,9 +1,9 @@
-import { jsxToString } from "jsx-async-runtime";
+import { html, jsxToString } from "jsx-async-runtime";
 
 export default function App({ greeting }: { greeting: string }) {
   return (
     <>
-      {{ html: `<!DOCTYPE html>` }}
+      {html("<!DOCTYPE html>")}
       <html lang="en">
         <head>
           <meta charset="utf-8" />
@@ -19,7 +19,7 @@ export default function App({ greeting }: { greeting: string }) {
   );
 }
 
-function Body({ children }: { children: JSX.Element[] }) {
+function Body({ children }: { children?: JSX.Element | JSX.Element[] }) {
   return (
     <body>
       <main>{children}</main>
@@ -32,10 +32,7 @@ function Footer(this: { date: Date }) {
   return (
     <footer
       class="footer highlight"
-      style={{
-        "background-color": "red",
-        color: "white",
-      }}
+      style="background-color: red; color: white"
     >
       {this.date.toLocaleString("en")}
     </footer>
@@ -49,20 +46,13 @@ async function Todos({ quantity = 3 }) {
     quantity > 0 && (
       <table style="margin: 0 auto; padding: 1rem; border: 1px solid lightgrey">
         <thead
-          class={
-            // Generate space separated class names for true properties
-            {
-              striped: false,
-              sticky: true,
-              '"classname-with-quotes"': true,
-            }
-          }
-          // For all attributes besides class & style objects get stringified
+          // class must be a string; build it from conditions as needed
+          class={["sticky", false && "striped", '"classname-with-quotes"'].filter(Boolean).join(" ")}
+          // Objects in attributes get stringified as JSON
           data-props={{ foo: "bar", count: 10 }}
         >
           <tr
-            // Use array for class names, join string values with space
-            class={["a", "b", "", undefined, "c"] as string[]}
+            class="a b c"
           >
             <th>Label</th>
             <th>Status</th>
